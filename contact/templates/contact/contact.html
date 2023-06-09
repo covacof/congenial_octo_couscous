@@ -1,0 +1,32 @@
+{%  extends "pages/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div><p>
+    {% if "valid" in request.GET %}
+        <div style="color: white; text-align: center">Information sent correctly, thank you.</div>
+    {% endif %}
+</p></div>
+<div style="display: flex; align-items: flex-start; justify-content: center; background-color: rgba(34,64,8); width: 50%; margin: 20px auto; border-radius: 10px; padding: 10px">
+
+
+
+
+
+  <form action="" method="POST" style="text-align: center;">{% csrf_token %}
+    <table style="color: white; margin: auto">
+        {{ myform.as_table }}
+    </table>
+      <p>
+
+      </p>
+    <input type="submit" value="Send" style="width: 150px">
+  </form>
+</div>
+<div><p>
+
+</p></div>
+
+
+{% endblock %}
